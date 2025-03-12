@@ -12,8 +12,7 @@ def accueil():
 
 def load_data():
     if 'df' not in st.session_state:
-        st.session_state.df = pd.read_csv('./data/TMDb_Dataset_clean.csv', parse_dates=['Date'])
-        #st.session_state.df['Country_lisible'] = st.session_state.df['Country'].replace({
+        st.session_state.df = pd.read_csv('https://nextcloud.raffiskender.duckdns.org/s/BYgFQ2rejAJwR9N', parse_dates=['Date'])
 
 def details():
     st.title("Détails d'un film")
