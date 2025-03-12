@@ -1,7 +1,16 @@
+import subprocess
+import sys
+
+try:
+    import matplotlib.pyplot as plt
+except ImportError:
+    print("matplotlib n'est pas installé. Installation en cours...")
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "matplotlib"])
+    print("matplotlib a été installé avec succès.")
+
 import streamlit as st
 import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
 import seaborn as sns
 import ast
 
