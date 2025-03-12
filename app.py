@@ -109,7 +109,7 @@ def budget_evolution():
 
     # 2- Affichage du graph
     plt.figure(figsize=(10, 6))
-    sns.lineplot(x='Year', y=data_choice, data=df_graph, hue='Country_lisible', ci=None)
+    sns.lineplot(x='Year', y=data_choice, data=df_graph, hue='Country_lisible', errorbar=None)
     plt.title(f'Évolution {data_choice} moyen par années pour les pays choisis')
     plt.legend(sorted(country_choice), title="Pays", loc="center left", bbox_to_anchor=(1, 0.5))
     st.pyplot(plt)
