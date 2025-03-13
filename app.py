@@ -1,7 +1,6 @@
 import streamlit as st
 import matplotlib.pyplot as plt
 import pandas as pd
-import numpy as np
 import seaborn as sns
 import ast
 
@@ -13,7 +12,7 @@ def accueil():
 def load_data():
     if 'df' not in st.session_state:
         # st.session_state.df = pd.read_csv('./data/TMDb_Dataset_clean.csv', parse_dates=['Date'])
-        st.session_state.df = pd.read_csv('https://nextcloud.raffiskender.duckdns.org/s/BYgFQ2rejAJwR9N/download/TMDb_Dataset_clean.csv', parse_dates=['Date'])
+        st.session_state.df = pd.read_csv('https://nextcloud.raffiskender.duckdns.org/s/rf6eS5EcaMyQDP4/download/TMDb_Dataset_clean.csv', parse_dates=['Date'])
 
 def details():
     st.title("Détails d'un film")
